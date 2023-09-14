@@ -45,7 +45,7 @@ export default function NaV({}: Props) {
         <a style={{ color: "white" }} href="/js/">
           JavaScript
         </a>
-        <a style={{ color: "white" }} href="/Performance">
+        <a style={{ color: "white" }} href="/python/">
           Performance
         </a>
       </div>
