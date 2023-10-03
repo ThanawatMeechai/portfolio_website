@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import "./nav.css";
 import MenuIcon from "@mui/icons-material/Menu";
 
-type Props = {};
+// type Props = {};
 
-export default function NaV({}: Props) {
+const NaV: React.FC = () => {
   const [menu, Setmenu] = useState(true);
   function updateElementWidth() {
     const viewportWidth = window.innerWidth - 5.7;
@@ -46,7 +46,7 @@ export default function NaV({}: Props) {
           JavaScript
         </a>
         <a style={{ color: "white" }} href="/python/">
-          Performance
+          Performancesssss
         </a>
       </div>
       <nav className="nav">
@@ -99,3 +99,4 @@ export default function NaV({}: Props) {
     </div>
   );
 }
+export default NaV;
