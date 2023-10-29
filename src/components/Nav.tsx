@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./nav.css";
 import MenuIcon from "@mui/icons-material/Menu";
 
@@ -6,13 +6,21 @@ import MenuIcon from "@mui/icons-material/Menu";
 
 const NaV: React.FC = () => {
   const [menu, Setmenu] = useState(true);
+  // useEffect(() => {
+  //   updateElementWidth();
+  // }, [viewportWidth]);
   function updateElementWidth() {
     const viewportWidth = window.innerWidth - 5.7;
-    if (viewportWidth > 1566 && menu == false) {
-      Setmenu(true);
+
+    if (viewportWidth > 1566 && !menu) {
+      Setmenu(true); // Assuming Setmenu is a function to set the 'menu' variable
       console.log(menu);
     }
-    document.querySelector(".nav").style.width = viewportWidth + "px";
+
+    // const navElement = document.querySelector(".nav") as HTMLElement | null;
+    // if (navElement) {
+    //   navElement.style.width = viewportWidth + "px";
+    // }
   }
 
   // เรียกใช้งานฟังก์ชันเมื่อโหลดหน้าหรือมีการเปลี่ยนขนาดหน้าจอ
@@ -36,7 +44,7 @@ const NaV: React.FC = () => {
           backgroundColor: "#dac0a3",
         }}
       >
-        <a style={{ color: "white" }} href="/html/">
+        <a style={{ color: "white" }} href="/About/">
           HTML
         </a>
         <a style={{ color: "white" }} href="/css/">
@@ -50,34 +58,34 @@ const NaV: React.FC = () => {
         </a>
       </div>
       <nav className="nav">
-        <div
+        <a
+          href="/"
           style={{
             marginLeft: 30,
-            color: "black",
+            color: "white",fontWeight:"bold" ,
             width: "150px",
             left: 10,
             alignSelf: "start",
           }}
         >
           <span>Portfolio Website</span>
-          <span> Presentation</span>
-        </div>
+          <span>Presentation</span>
+        </a>
         <div className="content-nav">
-          <a style={{ color: "black" }} href="/html/">
+        <a style={{ color: "white",fontWeight:"bold" }}  href="/About">
             HTML
           </a>{" "}
           |
-          <a style={{ color: "black" }} href="/css/">
-            CSS
+          <a style={{ color: "white",fontWeight:"bold" }}  href="/css/">
+            Project
           </a>{" "}
           |
-          <a style={{ color: "black" }} href="/js/">
+          <a style={{ color: "white",fontWeight:"bold" }}  href="/js/">
             JavaScript
           </a>{" "}
           |
-          <a style={{ color: "black" }} href="/Performance">
-            PerformanceXX
-            PerformanceDD
+          <a style={{ color: "white",fontWeight:"bold" }} href="/Performance">
+           Performance
           </a>
         </div>
         <div className="buttonmenu">
@@ -99,5 +107,5 @@ const NaV: React.FC = () => {
       </nav>
     </div>
   );
-}
+};
 export default NaV;
