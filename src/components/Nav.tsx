@@ -68,7 +68,7 @@ const NaV: React.FC = () => {
             alignSelf: "start",
           }}
         >
-          <span>Portfolio Website</span>
+          <span>Portfolio Websitw</span>
           <span>Presentation</span>
         </a>
         <div className="content-nav">
